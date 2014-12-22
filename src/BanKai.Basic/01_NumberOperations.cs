@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime;
 using Xunit;
 
 namespace BanKai.Basic
@@ -14,7 +13,7 @@ namespace BanKai.Basic
         public void should_get_minimum_value_of_a_number_type()
         {
             // change "default(sbyte)" to correct value. You should not explicitly write -128.
-            sbyte minimum = default(sbyte);
+            sbyte minimum = sbyte.MinValue;
 
             Assert.Equal(-128, minimum);
         }
@@ -23,7 +22,7 @@ namespace BanKai.Basic
         public void should_get_maximum_value_of_a_number_type()
         {
             // change "default(int)" to correct value. You should not explicitly write 2147483647.
-            int maximum = default(int);
+            int maximum = int.MaxValue;
 
             Assert.Equal(2147483647, maximum);
         }
