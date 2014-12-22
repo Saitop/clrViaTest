@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Principal;
 using Xunit;
 
 namespace BanKai.Basic
@@ -31,7 +32,7 @@ namespace BanKai.Basic
         public void should_get_correct_type_for_floating_point_number_without_literal()
         {
             // change "typeof(string)" to correct type.
-            Type guessTheType = typeof (string);
+            Type guessTheType = typeof(double);
 
             Assert.Equal(guessTheType, 1.0.GetType());
             Assert.Equal(guessTheType, 1E3.GetType());
@@ -41,9 +42,10 @@ namespace BanKai.Basic
         public void should_get_correct_type_for_integer_without_literal()
         {
             // change "typeof(string)" to correct type.
-            Type guessTheType = typeof (string);
+            Type guessTheType = typeof(int);
 
             Assert.Equal(guessTheType, 1.GetType());
+            Console.WriteLine(guessTheType);
             Assert.Equal(guessTheType, 0x123.GetType());
         }
 
