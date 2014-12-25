@@ -30,7 +30,7 @@ namespace BanKai.Basic.Extensions
             return constructorInfo != null;
         }
 
-        public static bool HasInstanceMethod(this object instance, string methodName, Type[] argumentTypes)
+        public static bool   HasInstanceMethod(this object instance, string methodName, Type[] argumentTypes)
         {
             if (instance == null)
             {
